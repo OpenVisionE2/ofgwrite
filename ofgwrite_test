@@ -19,15 +19,15 @@ killall smbd > /dev/null 2>&1
 killall rpc.mountd > /dev/null 2>&1
 killall rpc.statd > /dev/null 2>&1
 /etc/init.d/softcam stop > /dev/null 2>&1
-killall CCcam > /dev/null 2>&1
+killall -9 CCcam > /dev/null 2>&1
 pkill -9 -f '[Oo][Ss][Cc][Aa][Mm]' > /dev/null 2>&1
 ps w | grep -i oscam | grep -v grep | awk '{print $1}'| xargs kill -9 > /dev/null 2>&1
 pkill -9 -f '[Ww][Ii][Cc][Aa][Rr][Dd][Dd]' > /dev/null 2>&1
 ps w | grep -i wicardd | grep -v grep | awk '{print $1}'| xargs kill -9 > /dev/null 2>&1
-killall kodi.bin > /dev/null 2>&1
-killall hddtemp > /dev/null 2>&1
-killall transmission-daemon > /dev/null 2>&1
-killall openvpn > /dev/null 2>&1
+killall -9 kodi.bin > /dev/null 2>&1
+killall -9 hddtemp > /dev/null 2>&1
+killall -9 transmission-daemon > /dev/null 2>&1
+killall -9 openvpn > /dev/null 2>&1
 /etc/init.d/sabnzbd stop > /dev/null 2>&1
 pkill -9 -f cihelper > /dev/null 2>&1
 pkill -9 -f ciplus_helper > /dev/null 2>&1
